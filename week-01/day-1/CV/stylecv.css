@@ -1,0 +1,29 @@
+header{
+    background-image: url(./anakin.png);
+    background-size: contain;
+    width: 85%;
+    margin: 0 auto;
+    height:400px;
+    background-repeat: no-repeat;
+    
+}
+q {
+    display: block;
+    background-color: grey;
+    background-size: contain;
+    font-size: 40px;
+    color: white
+}
+main{
+    margin: 0 20%;
+}
+blockquote{
+    background-color: grey;
+    font-size: 40px;
+    color: white;
+    padding-top: 10px 10px;
+    padding-right: 30px 30px;
+}
+hgroup{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
