@@ -15,7 +15,7 @@ public class PartyIndicator {
         }else if(userInput1 == 0){
             System.out.println("Sausage party");
         }else{
-            System.out.println("invalid characters entered");
+           System.out.println("invalid characters entered");
         }
         // Write a program that asks for two numbers
 // The first number represents the number of girls that comes to a party, the
