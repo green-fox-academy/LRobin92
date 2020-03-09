@@ -1,6 +1,9 @@
+import javax.print.MultiDocPrintService;
+import java.io.ByteArrayOutputStream;
+import java.util.Random;
 import java.util.Scanner;
 
-public class DrawSquare {
+public class Gyakorlo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter a number for the square:");
@@ -15,6 +18,9 @@ public class DrawSquare {
                     System.out.print(" ");
             }
             System.out.println();
+            for (int k = 0; k < squares ; k++) {
+                //if ()
+            }
         }
     }
-}
+    }

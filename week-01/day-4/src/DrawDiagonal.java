@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DrawSquare {
+public class DrawDiagonal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter a number for the square:");
@@ -15,6 +15,7 @@ public class DrawSquare {
                     System.out.print(" ");
             }
             System.out.println();
+
         }
     }
 }

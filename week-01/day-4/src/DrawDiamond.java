@@ -16,7 +16,7 @@ public class DrawDiamond {
             for (int k = 0; k < stars; k++) {
                 System.out.print("*");
             }
-            System.out.println("2");
+            System.out.println("");
             stars += 2;
             spaceCount--;
         }
