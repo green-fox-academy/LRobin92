@@ -4,16 +4,31 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Diagonals {
+public class HorizontalLines {
     public static void mainDraw(Graphics graphics) {
-        // Draw the canvas' diagonals.
-        // If it starts from the upper-left corner it should be green, otherwise it should be red.
-        graphics.setColor(Color.GREEN);
-        graphics.drawLine(0, 0, 320, 320);
-        graphics.setColor(Color.RED);
-        graphics.drawLine(0, 320, 320, 0);
+        int x = 30;
+        int y = 30;
+        // Create a function that draws a single line and takes 3 parameters:
+        // The x and y coordinates of the line's starting point and the graphics
+        // and draws a 50 long horizontal line from that point.
+        // Draw at least 3 lines with that function using a loop.
+        for (int i = 0; i < 3; i++) {
+            drawHorizontal(x,y,graphics);
+            x+=20;
+            y+=20;
+
+        }
+
 
     }
+    public static void drawHorizontal(int x, int y, Graphics graphics){
+        int horizontalX = x + 50;
+        int horizontalY = y;
+        graphics.drawLine(x,y,horizontalX,horizontalY);
+        }
+
+
+
 
     // Don't touch the code below
     static int WIDTH = 320;
