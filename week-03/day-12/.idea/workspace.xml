@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b616b2d7-a17a-45f1-9bf3-4b9f3be65770" name="Default Changelist" comment="" />
+    <list default="true" id="b616b2d7-a17a-45f1-9bf3-4b9f3be65770" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/diceset/DiceSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fleetofthings/Fleet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fleetofthings/FleetOfThings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fleetofthings/Thing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/petrolstation/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/petrolstation/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/petrolstation/Station.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pokemon/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pokemon/Pokemon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sharpie2/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sharpie2/Sharpie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sharpie2/SharpieSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/teacherstudent/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/teacherstudent/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/teacherstudent/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,20 +33,59 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1ZGTYYgWut1nxG92aXAoJA1bKAN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.CounterTest.addMore">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BlogPost.Main" />
+  <component name="RunManager" selected="Application.Main (2)">
+    <configuration name="DiceSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="diceset.DiceSet" />
       <module name="day-12" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BlogPost.*" />
+          <option name="PATTERN" value="diceset.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FleetOfThings" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fleetofthings.FleetOfThings" />
+      <module name="day-12" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fleetofthings.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="petrolstation.Main" />
+      <module name="day-12" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="petrolstation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -37,24 +94,11 @@
       </method>
     </configuration>
     <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Animal.Main" />
+      <option name="MAIN_CLASS_NAME" value="sharpie2.Main" />
       <module name="day-12" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Animal.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Sharpie.Main" />
-      <module name="day-12" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Sharpie.*" />
+          <option name="PATTERN" value="sharpie2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -63,41 +107,25 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="objectorientation.Main" />
+      <option name="MAIN_CLASS_NAME" value="teacherstudent.Main" />
       <module name="day-12" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="objectorientation.*" />
+          <option name="PATTERN" value="teacherstudent.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CounterTest.addMore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="day-12" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Counter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Counter" />
-      <option name="MAIN_CLASS_NAME" value="Counter.CounterTest" />
-      <option name="METHOD_NAME" value="addMore" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CounterTest.addMore" />
-        <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.DiceSet" />
+        <item itemvalue="Application.FleetOfThings" />
       </list>
     </recent_temporary>
   </component>
@@ -105,32 +133,58 @@
     <configuration />
   </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b616b2d7-a17a-45f1-9bf3-4b9f3be65770" name="Default Changelist" comment="" />
+      <created>1584464479242</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584464479242</updated>
+      <workItem from="1584464482602" duration="2165000" />
+      <workItem from="1584466716127" duration="1392000" />
+      <workItem from="1584518387954" duration="23692000" />
+      <workItem from="1584619846767" duration="201000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="620" y="304" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584453769580">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="620" y="304" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1584453769580" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1584463756392">
+    <state x="549" y="157" key="FileChooserDialogImpl" timestamp="1584620020816">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584463756392" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1584463756392">
+    <state x="549" y="157" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584620020816" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1584549274696">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584463756392" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1584463756392">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584549274696" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1584549274696">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584463756392" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1584463756392">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584549274696" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1584549274696">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584463756392" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584549274696" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1584549274696">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584549274696" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1584619845624">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584619845624" />
     <state x="498" y="314" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584460233458">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="314" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1584460233458" />
+    <state x="209" y="39" key="new project wizard" timestamp="1584620025996">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="39" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1584620025996" />
   </component>
 </project>
