@@ -22,17 +22,49 @@ public class Ship extends BattleApp{
     //The winner captain and crew has a party, including a random number of rum :)
     List<Pirate> listOfCrew;
     Pirate captain;
-    public Ship(){
+    String shipName;
+    boolean win;
+    Random random = new Random();
+    public Ship(String shipName){
+        this.shipName = shipName;
         listOfCrew = new ArrayList<>();
         fillShip();
     }
 
     public void fillShip(){
-        Random random = new Random();
-        int crew = random.nextInt(10);
+        this.captain = new Pirate();
+        int crew = random.nextInt(10) + 1;
         for (int i = 1; i < crew; i++) {
             listOfCrew.add(new Pirate());
         }
-
+    }
+    public void statusOfShip(){
+        this.captain.getStatus();
+        System.out.println("The captain consumed: " + this.captain.getRumLevel() + "l of rum");
+        System.out.println("Alive member(s) in the ship: " + this.listOfCrew.size());
+    }
+    public void battle(Ship ship){
+        int score = this.listOfCrew.size() - this.captain.getRumLevel();
+        int score2 = ship.listOfCrew.size() - ship.captain.getRumLevel();
+        int deadCrew = random.nextInt(this.listOfCrew.size());
+        int deadCrew2 = random.nextInt(ship.listOfCrew.size());
+        int randomRum = random.nextInt(5);
+        if (score > score2){
+            win = true;
+            System.out.println(this.shipName + " wins this fight");
+            for (int i = 0; i < deadCrew2 -1; i++) {
+                ship.listOfCrew.remove(i);
+            }
+            this.captain.setRumLevel(randomRum);
+        }else if (score == score2){
+            System.out.println("Its a draw mate");
+        }else {
+            win = false;
+            System.out.println(ship.shipName + " wins this fight");
+            for (int i = 0; i < deadCrew -1; i++) {
+                this.listOfCrew.remove(i);
+            }
+            ship.captain.setRumLevel(randomRum);
+        }
     }
 }

@@ -79,6 +79,20 @@ public class Pirate {
     public void addParrot(){
         System.out.println("Added a parrot for no reason....");
     }
-
+    public void getStatus() {
+        if(status==2){
+            System.out.println("The captain is alive");
+        }else if (status == 1){
+            System.out.println("The captian is knocked out");
+        }else{
+            System.out.println("Dead");
+        }
+    }
+    public int getRumLevel() {
+        return rumLevel;
+    }
+    public void setRumLevel(int rumLevel) {
+        this.rumLevel = rumLevel;
+    }
 
 }
