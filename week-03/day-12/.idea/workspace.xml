@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b616b2d7-a17a-45f1-9bf3-4b9f3be65770" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/diceset/DiceSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fleetofthings/Fleet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fleetofthings/FleetOfThings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fleetofthings/Thing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/petrolstation/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/petrolstation/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/petrolstation/Station.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pokemon/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pokemon/Pokemon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sharpie2/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sharpie2/Sharpie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sharpie2/SharpieSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/teacherstudent/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/teacherstudent/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/teacherstudent/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/farm/AnimalsInFarm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/farm/Farm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,6 +129,8 @@
       <workItem from="1584466716127" duration="1392000" />
       <workItem from="1584518387954" duration="23692000" />
       <workItem from="1584619846767" duration="201000" />
+      <workItem from="1584817542178" duration="7362000" />
+      <workItem from="1584890464814" duration="12000" />
     </task>
     <servers />
   </component>
@@ -174,10 +162,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584549274696" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1584619845624">
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1584890463640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584619845624" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584890463640" />
     <state x="498" y="314" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584460233458">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
