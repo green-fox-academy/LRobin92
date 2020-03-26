@@ -7,6 +7,8 @@ public class BattleApp {
 
 
         pirate1.drinkSomeRum();
+        pirate1.brawl(pirate2);
+        pirate1.addParrot();
 
 
     }

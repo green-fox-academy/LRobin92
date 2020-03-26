@@ -6,6 +6,7 @@ public class Pirate {
     private int rumLevel;
     private int status;// if status  0 = dead, 1 = passed out , 2 = alive
     private String name;
+
     //Create a Pirate class. While you can add other fields and methods, you must have these methods:-
     //
     //drinkSomeRum() - intoxicates the Pirate some
@@ -26,9 +27,9 @@ public class Pirate {
     }
 
     public void drinkSomeRum(){
-        if (status == 2){
+        if (this.status == 2){
             rumLevel++;
-        }else if (status == 1){
+        }else if (this.status == 1){
             System.out.println("Errrgh dat piRATe iz pass'd out");
         }else{
             System.out.println("Arghh you lil rat itz ded");
@@ -36,13 +37,13 @@ public class Pirate {
 
     }
     public void howItGoingMate(){
-        if (status == 2){
-            if(rumLevel <= 4){
+        if (this.status == 2){
+            if(this.rumLevel <= 4){
                 System.out.println("Pour me anudder!");
             }else {
                 System.out.println("Arghh, I'ma Pirate. How d'ya d'ink its goin?");
             }
-        }else if (status == 1){
+        }else if (this.status == 1){
             System.out.println("Errrgh dat piRATe iz pass'd out");
         }else{
             System.out.println("Arghh ya lil rat itz ded");
@@ -70,6 +71,9 @@ public class Pirate {
     }
     public void setStatus(int status) {
         this.status = status;
+    }
+    public void addParrot(){
+        System.out.println("Added a parrot for no reason....");
     }
 
 
