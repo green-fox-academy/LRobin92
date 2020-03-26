@@ -1,14 +1,13 @@
 package pirates;
 
-public class BattleApp {
+public class BattleApp{
     public static void main(String[] args) {
-        Pirate pirate1 = new Pirate("BigBeard");
-        Pirate pirate2 = new Pirate("Lil Rat");
+        Pirate bigBeard = new Pirate("BigBeard");
+        Pirate lilRat = new Pirate("Lil Rat");
+        Ship ship1 = new Ship();
 
-
-        pirate1.drinkSomeRum();
-        pirate1.brawl(pirate2);
-        pirate1.addParrot();
+        ship1.fillShip();
+        System.out.println("ship's crew number: " + ship1.listOfCrew.size());
 
 
     }

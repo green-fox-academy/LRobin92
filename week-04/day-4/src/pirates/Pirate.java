@@ -20,6 +20,10 @@ public class Pirate {
     //And... if you get that far...
     //
     //Add a parrot.
+    public Pirate(){
+        this.rumLevel = 0;
+        this.status = 2;
+    }
     public Pirate(String name){
         this.rumLevel = 0;
         this.status = 2;
@@ -30,9 +34,9 @@ public class Pirate {
         if (this.status == 2){
             rumLevel++;
         }else if (this.status == 1){
-            System.out.println("Errrgh dat piRATe iz pass'd out");
+            System.out.println("Errrgh dat " + this.name + " pass'd out");
         }else{
-            System.out.println("Arghh you lil rat itz ded");
+            System.out.println("Arghh " + this.name + " ded");
         }
 
     }
@@ -44,16 +48,16 @@ public class Pirate {
                 System.out.println("Arghh, I'ma Pirate. How d'ya d'ink its goin?");
             }
         }else if (this.status == 1){
-            System.out.println("Errrgh dat piRATe iz pass'd out");
+            System.out.println("Errrgh dat " + this.name + " pass'd out");
         }else{
-            System.out.println("Arghh ya lil rat itz ded");
+            System.out.println("Arghh " + this.name + " ded");
         }
 
     }
     public void die(){
         this.status = 0;
     }
-    public void brawl(Pirate pirate1){
+    public void brawl(Pirate pirate){
         Random random = new Random();
         int chance = random.nextInt(3);
         int chance1 = random.nextInt(3);
@@ -62,11 +66,11 @@ public class Pirate {
             System.out.println(this.name + " iz ded.");
         }else if (chance == chance1){
             this.status = 1;
-            pirate1.setStatus(1);
+            pirate.setStatus(1);
             System.out.println("Dey nock'd each odah'!");
         }else {
-            pirate1.die();
-            System.out.println(pirate1.name + " iz ded.");
+            pirate.die();
+            System.out.println(pirate.name + " iz ded.");
         }
     }
     public void setStatus(int status) {
