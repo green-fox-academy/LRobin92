@@ -7,23 +7,18 @@ import java.util.List;
 //eg. watering with 40 and 4 of them need water then each gets watered with 10
 public class Garden {
      private List<Plant> listOfPlants = new ArrayList<>();
-     double sharedWater;
-     double waterAmount;
      public Garden(){
-         this.waterAmount = 0;
      }
      public void addPlants(Plant plant){
          listOfPlants.add(plant);
      }
      public void watering(double waterAmount){
-         this.waterAmount = this.waterAmount + waterAmount;
-         this.sharedWater = waterAmount / listOfPlants.size();
+         double sharedWater = waterAmount / listOfPlants.size();
          System.out.println("Watering with " + (int)waterAmount);
-         for (Plant p: listOfPlants) {
-             p.currentWaterlevel = this.sharedWater + p.currentWaterlevel;
-             p.statusInfo(sharedWater);
+         for (Plant plant: listOfPlants) {
+             plant.water(sharedWater);
+             plant.statusInfo();
          }
-         //return sharedWater;
      }
 
 }

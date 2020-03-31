@@ -8,14 +8,13 @@ public class Main {
         Flower flower2 = new Flower("pink");
         Garden gardenOfPlants = new Garden();
 
-
         gardenOfPlants.addPlants(flower);
         gardenOfPlants.addPlants(flower2);
         gardenOfPlants.addPlants(tree1);
         gardenOfPlants.addPlants(tree2);
+        gardenOfPlants.watering(0);
         gardenOfPlants.watering(40);
         gardenOfPlants.watering(70);
-        System.out.println(gardenOfPlants.waterAmount);
 
 
 

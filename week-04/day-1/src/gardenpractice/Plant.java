@@ -1,25 +1,29 @@
 package gardenpractice;
 
-public class Plant {
-    double currentWaterlevel;
-    double maxWaterlevel;
-    String color;
-    String type;
+public abstract class Plant {
+    protected double currentWaterlevel;
+    protected double maxWaterlevel;
+    protected String color;
+    protected String type;
+    protected double waterAbsorb;
 
-
-    public Plant(String color){
-        this.color = color;
-        this.currentWaterlevel = 0;
-    }
     public Plant(){}
-    public void setMaxWaterlevel(int maxWaterlevel) {
-        this.maxWaterlevel = maxWaterlevel;
-    }
     public void setType(String type) {
         this.type = type;
     }
-    public void statusInfo(double water){
+    public void setCurrentWaterlevel(double currentWaterlevel) {
+        this.currentWaterlevel = currentWaterlevel;
     }
-
-
+    public void statusInfo(){
+        if (this.currentWaterlevel < this.maxWaterlevel){
+            System.out.println("The "+color+" "+ type + " needs water.");
+        }else
+            System.out.println("The "+color+" "+ type + " doesnt need water.");
+    }
+    public double getCurrentWaterlevel() {
+        return currentWaterlevel;
+    }
+    public void water(double waterQuantity){
+       currentWaterlevel += waterAbsorb * waterQuantity;
+    }
 }
