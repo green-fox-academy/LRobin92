@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Ship extends BattleApp{
+public class Ship{
 
     //Create a Ship class.
     //The Ship stores Pirate-s instances in a list as the crew and has one captain who is also a Pirate.
