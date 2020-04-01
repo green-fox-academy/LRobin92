@@ -1,5 +1,6 @@
 package farm;
 
+
 public class Main {
     public static void main(String[] args) {
         Farm farm = new Farm();
@@ -12,8 +13,6 @@ public class Main {
         System.out.println(farm.listOfAnimals.size());
         farm.listOfAnimals.get(1).eat();
         farm.listOfAnimals.get(1).eat();
-        farm.listOfAnimals.get(4).eat();
-        farm.listOfAnimals.get(4).eat();
         farm.listOfAnimals.get(4).eat();
         farm.listOfAnimals.get(3).play();
         farm.slaughter();

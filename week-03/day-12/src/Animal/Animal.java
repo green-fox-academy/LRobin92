@@ -7,7 +7,7 @@ public class Animal {
     //Every animal can eat() which decreases their hunger by one
     //Every animal can drink() which decreases their thirst by one
     //Every animal can play() which increases both by one
-     public int hunger;
+    public int hunger;
     public int thirst;
 
     public  Animal(){
@@ -16,7 +16,6 @@ public class Animal {
     }
     public void eat(){
         hunger--;
-        System.out.println(this.hunger);
     }
     public void drink(){
         thirst--;
