@@ -1,10 +1,17 @@
 package farm;
 
+import Animal.Animal;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Farm {
-    int freeSlots = 0;
-    int maxSlot = 4;
+    int freeSlots = 6;
+    List<Animal> listOfAnimals = new ArrayList<>();
 
     public static void main(String[] args) {
+
         //Create a Farm class
         //it has list of Animals
         //it has slots which defines the number of free places for animals
@@ -12,28 +19,29 @@ public class Farm {
         //slaughter() -> removes the least hungry animal
 
 
-        AnimalsInFarm cow1 = new AnimalsInFarm();
-        AnimalsInFarm cow2 = new AnimalsInFarm();
-        AnimalsInFarm cow3 = new AnimalsInFarm();
-        AnimalsInFarm chicken1 = new AnimalsInFarm();
-        AnimalsInFarm chicken2 = new AnimalsInFarm();
-        AnimalsInFarm chicken3 = new AnimalsInFarm();
-
-
-
     }
+
     public void breed() {
-        freeSlots++;
-        if (freeSlots == maxSlot){
+        if (freeSlots == 0) {
             System.out.println("You can not create more animals.");
-        }else{
-            freeSlots++;
+        } else {
+            Animal animal = new Animal();
+            listOfAnimals.add(animal);
+            freeSlots--;
         }
 
     }
-    public void slaughter(){
-        freeSlots--;
+
+    public void slaughter() {
+        Animal fedAnimal = new Animal();
+        for (Animal animal : this.listOfAnimals) {
+            if (animal.hunger < fedAnimal.hunger) {
+                fedAnimal = animal;
+            }
+        }
+        listOfAnimals.remove(listOfAnimals.indexOf(fedAnimal));
+        freeSlots++;
     }
 
-
 }
+
