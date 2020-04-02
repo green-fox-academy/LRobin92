@@ -59,11 +59,11 @@ class ExtensionTest {
 
     @Test
     void testTranslate_bemutatkozik() {
-        assertEquals("evepever", extension.translate("eper"));
+        assertEquals("avalmava", extension.translate("alma"));
     }
 
     @Test
     void testTranslate_lagopus() {
-        assertEquals("lavagovopuvus", extension.translate("lagopus"));
+        assertEquals("bovombava", extension.translate("bomba"));
     }
 }
