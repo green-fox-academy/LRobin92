@@ -1,15 +1,18 @@
 import java.io.*;
-import java.nio.Buffer;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.List;
+
 
 public class CopyFile {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         try{
             fileCopier();
-        }catch(Exception e){
-            System.out.println("Something went wrong");
+        }catch(NoSuchFileException e){
+            //System.out.println("No file founded");
+            throw new IOException("No file");
+        }catch (Exception e){
+            throw new Exception("Something went wrong");
         }
         // Write a function that copies the contents of a file into another
 // It should take the filenames as parameters
