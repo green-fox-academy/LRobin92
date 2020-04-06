@@ -28,12 +28,17 @@ public class Doubled {
       System.out.println("Something went wrong");
     }
     for (String line: lines) {
+      //2 új character alapú listák kreáltam, hogy ezekbe először a szétszedett charactereket tároljam,
+      //majd a másikba a már duplikálódás mentes karaktereket tegyem bele, illetve egy üres stringet
+      //amibe majd a karaktereket töltöm vissza
       List<Character> theDuplicatedChars = new ArrayList<>();
       List<Character> theDecryptedChars = new ArrayList<>();
       String charsBackToString = "";
+      //itt szedem szét karakterekre a sorokat egy foreach-el
       for (char c: line.toCharArray()) {
         theDuplicatedChars.add(c);
       }
+      //
       for (int i = 0; i < theDuplicatedChars.size(); i++) {
         if (i > 1) {
           theDuplicatedChars.remove(i - 1);
