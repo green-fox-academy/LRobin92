@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HelloWorld {
-  
+
   @RequestMapping(value="/hello")
   @ResponseBody
   public static String hello(){
