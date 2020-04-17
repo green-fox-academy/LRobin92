@@ -1,0 +1,63 @@
+h1{
+font-size: 40px;
+    color: lightskyblue;
+}
+hr{
+    width: 100%;
+    border-color: lightskyblue;
+}
+.onlyavaible{
+    text-transform: none;
+    margin: 0 50px;
+    background: red;
+    width: 10%;
+    height: 10%;
+    color: white;
+    border: 10px red;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.cheapestfirst{
+    text-transform: none;
+    margin: 0 50px;
+    background: red;
+    width: 10%;
+    height: 10%;
+    color: white;
+    border: 10px red;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.containsnike{
+    text-transform: none;
+    margin: 0 50px;
+    background: red;
+    width: 10%;
+    height: 10%;
+    color: white;
+    border: 10px red;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.avaragestock{
+    text-transform: none;
+    margin: 0 50px;
+    background: red;
+    width: 100%;
+    height: 100%;
+    border: 10px red;
+    border-radius: 10px;
+}
+.mostexpensive{
+    text-transform: none;
+    margin: 0 50px;
+    background: red;
+    width: 100%;
+    height: 100%;
+    border: 10px red;
+    border-radius: 10px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
