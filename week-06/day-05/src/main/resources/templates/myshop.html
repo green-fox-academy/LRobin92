@@ -8,36 +8,23 @@
 <body>
 <h1> My Shop </h1>
 <hr>
-<table class="navigationtable">
-    <th>
-        <td><p class="onlyavaible"><a href="http://localhost:8080/webshop/onlyavaible" target="_blank"
-        >ONLY AVAILABLE</a></p></td>
-    </th>
-    <th>
-        <td><p class="cheapestfirst"><a href="http://localhost:8080/webshop/cheapest" target="_blank"
-        >CHEAPEST FIRST</a></p></td>
-    </th>
-    <th>
-        <td><p class="containsnike"><a href="http://localhost:8080/webshop/containsnike"
-        >CONTAINS NIKE</a></p></td>
-    </th>
-    <th>
-        <td><p class="avaragestock"><a href="http://localhost:8080/webshop/avarage" target="_blank"
-        >AVARAGE STOCK</a></p></td>
-    </th>
-    <th>
-        <td><p class="mostexpensive"><a href="http://localhost:8080/webshop/onlyavaible"
-        >MOST EXPENSIVE AVAIBLE</a></p></td>
-    </th>
-</table>
 <div class="option-bar">
-    <a href="#">Only available</a>
-    <a href="#">Cheapest first</a>
+    <a href="http://localhost:8080/webshop/onlyavaible">Only available</a>
+    <a href="http://localhost:8080/webshop/cheapest">Cheapest first</a>
     <a href="http://localhost:8080/webshop/containsnike">Contains nike</a>
     <a href="http://localhost:8080/webshop/avarage">Average Stock</a>
     <a href="http://localhost:8080/webshop/mostexpensive">Most expensive available</a>
 </div>
 <table class="itemtable">
+    <tr>
+        <td><label for="search">Search for:</label></td>
+    </tr>
+    <tr>
+        <td>
+        <input type="text" id="search" name="searchInput" placeholder="...something like nike">
+        <input type="submit" value="Search">
+        </td>
+    </tr>
         <th> Name </th>
         <th> Description </th>
         <th> Price </th>
