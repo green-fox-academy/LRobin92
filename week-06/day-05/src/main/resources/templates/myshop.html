@@ -6,7 +6,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<a class="main" href="http://localhost:8080/webshop" >My Shop</a>
+<div class="mainheader">
+    <a class="main" href="http://localhost:8080/webshop" >My Shop</a>
+    <a class="more" href="http://localhost:8080/webshop/more" >More>></a>
+</div>
+
 <hr>
 <div class="option-bar">
     <a href="http://localhost:8080/webshop/onlyavaible">Only available</a>
@@ -18,7 +22,7 @@
 <table class="itemtable">
     <form action="/webshop/search" method="POST">
     <tr>
-        <td><label for="search">Search for:</label></td>
+        <td><label class="searchheader" for="search">Search for:</label></td>
     </tr>
     <tr>
         <td>
@@ -36,7 +40,7 @@
         <tr th:each="item : ${items}">
             <td th:text="${item.getName()}"></td>
             <td th:text="${item.getDescription()}"></td>
-            <td th:text="${item.getPrice()}"></td>
+            <td th:text="${item.getPrice()} + ${currency}"></td>
             <td th:text="${item.getQuantityOfStock()}"></td>
         </tr>
 </table>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="/mystyle.css"/>
+<head>
+    <title>My Shop</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div class="mainheader">
+    <a class="main" href="http://localhost:8080/webshop">My Shop</a>
+    <a class="more" href="http://localhost:8080/webshop">Less</a>
+</div>
+
+<hr>
+<div class="option-bar">
+    <a href="http://localhost:8080/webshop/clothesandshoes">CLOTHES AND SHOES</a>
+    <a href="http://localhost:8080/webshop/electronics">ELECTRONICS</a>
+    <a href="http://localhost:8080/webshop/beveragesandsnacks">BEVERAGES AND SNACKS</a>
+    <a href="http://localhost:8080/webshop/priceineuro">EURO</a>
+    <a href="http://localhost:8080/webshop/originalprice">ORIGINAL PRICE</a>
+</div>
+<table class="itemtable">
+    <form action="/webshop/filterbyprice" method="POST">
+        <tr>
+            <td><label class="filtersearchheader" for="searchInput">Filter by price:</label></td>
+        </tr>
+        <tr>
+            <div class="pricefilter">
+                <td><input type="submit" name="searchValue" value="Above"></td>
+                <td><input type="submit" name="searchValue" value="Below"></td>
+                <td><input type="submit" name="searchValue" value="Exactly"></td>
+            </div>
+            <td>
+                <input type="number" id="searchInput" name="filterbyprice" placeholder="...e.g.:300">
+            </td>
+
+        </tr>
+    </form>
+    <th> Name</th>
+    <th> Description</th>
+    <th> Price</th>
+    <th> Quantity of Stock</th>
+    <tr th:each="item : ${items}">
+        <td th:text="${item.getName()}"></td>
+        <td th:text="${item.getDescription()}"></td>
+        <td th:text="${item.getPrice()} + ${currency}"></td>
+        <td th:text="${item.getQuantityOfStock()}"></td>
+    </tr>
+</table>
+</body>
+</html>

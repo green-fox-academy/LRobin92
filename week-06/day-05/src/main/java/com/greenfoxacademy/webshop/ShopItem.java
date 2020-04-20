@@ -3,14 +3,16 @@ package com.greenfoxacademy.webshop;
 public class ShopItem {
   private String name;
   private String description;
-  private int price;
+  private float price;
   private int quantityOfStock;
+  private String type;
 
-  public ShopItem(String name, String description, int price, int quantityOfStock) {
+  public ShopItem(String name, String description, float price, int quantityOfStock, String type) {
     this.name = name;
     this.description = description;
     this.price = price;
     this.quantityOfStock = quantityOfStock;
+    this.type = type;
   }
 
   public String getName() {
@@ -21,7 +23,7 @@ public class ShopItem {
     return description;
   }
 
-  public int getPrice() {
+  public float getPrice() {
     return price;
   }
 
@@ -29,4 +31,7 @@ public class ShopItem {
     return quantityOfStock;
   }
 
+  public String getType() {
+    return type;
+  }
 }

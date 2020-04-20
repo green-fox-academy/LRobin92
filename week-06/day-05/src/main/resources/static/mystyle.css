@@ -2,8 +2,12 @@ body {
     font-family: 'DejaVu Serif', Georgia, "Times New Roman", Times, serif;
 
 }
+.mainheader{
+    display: flex;
+    justify-content: space-between;
+}
 
-.main {
+.main ,.more{
     font-size: 40px;
     color: lightskyblue;
     text-decoration: none;
@@ -37,9 +41,20 @@ hr {
     box-shadow: 1px 1px 1px #000000;
 }
 th{
-    text-align: left;
+    text-align: center;
     font-weight: normal;
     background: lightskyblue;
+    height: 40px;
+}
+input .pricefilter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.filtersearchheader{
+    color: red;
+    display: flex;
+    align-content: flex-end;
 }
 input{
     display: flex;
@@ -61,3 +76,8 @@ input[type=submit], input[type=Search] {
     border-radius: 10px;
     font-size: 15px;
 }
+
+.searchheader{
+    color: red;
+}
+
