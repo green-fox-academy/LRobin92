@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -70,7 +71,23 @@ public class MainController {
         .collect(Collectors.toList()));
     return "myshop";
   }
-
+  @RequestMapping(value = "webshop/avarage", method = RequestMethod.GET)
+  public String getAverageStock(Model model) {
+    model.addAttribute("averageOfStock", shopItemsList.stream()
+        .mapToDouble(item -> item.getQuantityOfStock())
+        .average()
+        .orElseGet(() -> 0));
+    return "stockavarage";
+  }
+  @RequestMapping(path = "webshop/search", method = RequestMethod.POST)
+  public String searchByNames(String searchInput,
+                              Model model) {
+    model.addAttribute("items", shopItemsList.stream()
+        .filter(item -> item.getName().toLowerCase().contains(searchInput.toLowerCase())
+            || item.getDescription().toLowerCase().contains(searchInput.toLowerCase()))
+        .collect(Collectors.toList()));
+    return "myshop";
+  }
 
 
 

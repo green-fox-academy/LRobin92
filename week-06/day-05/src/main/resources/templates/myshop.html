@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<h1> My Shop </h1>
+<a class="main" href="http://localhost:8080/webshop" >My Shop</a>
 <hr>
 <div class="option-bar">
     <a href="http://localhost:8080/webshop/onlyavaible">Only available</a>
@@ -16,15 +16,19 @@
     <a href="http://localhost:8080/webshop/mostexpensive">Most expensive available</a>
 </div>
 <table class="itemtable">
+    <form action="/webshop/search" method="POST">
     <tr>
         <td><label for="search">Search for:</label></td>
     </tr>
     <tr>
         <td>
         <input type="text" id="search" name="searchInput" placeholder="...something like nike">
-        <input type="submit" value="Search">
+        </td>
+        <td>
+            <input type="submit" value="Search">
         </td>
     </tr>
+    </form>
         <th> Name </th>
         <th> Description </th>
         <th> Price </th>

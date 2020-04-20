@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="/mystyle.css"/>
+<head>
+    <title>My Shop</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<a class="main" href="http://localhost:8080/webshop" >My Shop</a>
+<hr>
+<div class="option-bar">
+    <a href="http://localhost:8080/webshop/onlyavaible">Only available</a>
+    <a href="http://localhost:8080/webshop/cheapest">Cheapest first</a>
+    <a href="http://localhost:8080/webshop/containsnike">Contains nike</a>
+    <a href="http://localhost:8080/webshop/avarage">Average Stock</a>
+    <a href="http://localhost:8080/webshop/mostexpensive">Most expensive available</a>
+</div>
+<p th:text="'Average stock:' + ${averageOfStock}"></p>
+</body>
+</html>

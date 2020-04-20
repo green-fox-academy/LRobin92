@@ -1,15 +1,20 @@
-body{
+body {
     font-family: 'DejaVu Serif', Georgia, "Times New Roman", Times, serif;
+
 }
-h1{
-font-size: 40px;
+
+.main {
+    font-size: 40px;
     color: lightskyblue;
+    text-decoration: none;
 }
-hr{
+
+hr {
     width: 100%;
     border-color: lightskyblue;
 }
-.option-bar{
+
+.option-bar {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -18,23 +23,35 @@ hr{
     justify-content: space-around;
     margin-bottom: 10px;
 }
-.option-bar a{
+
+.option-bar a {
     color: #FFFFFF;
     background-color: #F23838;
     padding: 5px;
     border-radius: 5px;
     font-size: 14px;
-}
-.option-bar a:hover{
-    box-shadow: 1px 1px 1px #000000;
+    text-decoration: none;
 }
 
-input[type=text], input[type=search]{
+.option-bar a:hover {
+    box-shadow: 1px 1px 1px #000000;
+}
+th{
+    text-align: left;
+    font-weight: normal;
+    background: lightskyblue;
+}
+input{
+    display: flex;
+    justify-content: space-between;
+}
+input[type=text], input[type=search] {
     outline: none !important;
-    border:1px solid red;
+    border: 1px solid red;
     box-shadow: 0 0 5px red;
 }
-input[type=submit], input[type=Search]{
+
+input[type=submit], input[type=Search] {
     margin: 0 50px;
     background: red;
     width: 100px;
