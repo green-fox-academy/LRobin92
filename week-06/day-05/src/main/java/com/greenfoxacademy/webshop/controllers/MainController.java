@@ -19,15 +19,15 @@ public class MainController {
 
   public List<ShopItem> addItemsToList() {
     emptyList.add(new ShopItem("Running shoes",
-        "Nike running shoes for everyday sport", 1000, 5,"clothesandshoes"));
+        "Nike running shoes for everyday sport", 1000, 5, "clothesandshoes"));
     emptyList.add(new ShopItem("Wokin", "Chicken with fried rice and WOKIN sauce",
-        119, 100,"beveragesandsnacks"));
+        119, 100, "beveragesandsnacks"));
     emptyList.add(new ShopItem("Printer", "Some HP printer that will print pages",
-        3000, 2,"electronics"));
+        3000, 2, "electronics"));
     emptyList.add(new ShopItem("Coca cola", "0.5l standard coke",
-        25, 0,"beveragesandsnacks"));
+        25, 0, "beveragesandsnacks"));
     emptyList.add(new ShopItem("T-shirt", "Blue with a corgi on a bike",
-        300, 1,"clothesandshoes"));
+        300, 1, "clothesandshoes"));
     return emptyList;
   }
 
@@ -101,12 +101,14 @@ public class MainController {
     model.addAttribute("currency", "czk");
     return "myshop";
   }
+
   @RequestMapping(value = "/webshop/more", method = RequestMethod.GET) //
   public String moreOption(Model model) {
     model.addAttribute("items", shopItemsList);
     model.addAttribute("currency", "czk");
     return "morefilteroption";
   }
+
   @RequestMapping(value = "webshop/clothesandshoes", method = RequestMethod.GET)
   public String clothesAndShoes(Model model) {
     model.addAttribute("items", shopItemsList.stream()
@@ -115,6 +117,7 @@ public class MainController {
     model.addAttribute("currency", "czk");
     return "morefilteroption";
   }
+
   @RequestMapping(value = "webshop/electronics", method = RequestMethod.GET)
   public String electronics(Model model) {
     model.addAttribute("items", shopItemsList.stream()
@@ -123,6 +126,7 @@ public class MainController {
     model.addAttribute("currency", "czk");
     return "morefilteroption";
   }
+
   @RequestMapping(value = "webshop/beveragesandsnacks", method = RequestMethod.GET)
   public String beveragesAndSnacks(Model model) {
     model.addAttribute("items", shopItemsList.stream()
@@ -131,25 +135,28 @@ public class MainController {
     model.addAttribute("currency", "czk");
     return "morefilteroption";
   }
+
   @RequestMapping(value = "webshop/originalprice", method = RequestMethod.GET)
   public String originalCurrency(Model model) {
     model.addAttribute("items", shopItemsList);
-    model.addAttribute("currency","czk");
+    model.addAttribute("currency", "czk");
     return "morefilteroption";
   }
+
   @RequestMapping(value = "webshop/priceineuro", method = RequestMethod.GET)
   public String priceInEuro(Model model) {
     model.addAttribute("items", shopItemsList.stream()
         .map(item -> new ShopItem(item.getName(), item.getDescription(),
-            item.getPrice()* 0.037f,
+            item.getPrice() * 0.035f,
             item.getQuantityOfStock(), item.getType()))
         .collect(Collectors.toList()));
     model.addAttribute("currency", "eur");
     return "morefilteroption";
   }
+
   @RequestMapping(path = "/webshop/filterbyprice", method = RequestMethod.POST)
   public String filterByPrice(@RequestParam String searchValue,
-                              @RequestParam(value = "filterbyprice")Integer number,
+                              @RequestParam(value = "filterbyprice") Integer number,
                               Model model) {
     switch (searchValue) {
       case "Above":
@@ -171,7 +178,6 @@ public class MainController {
     model.addAttribute("currency", new String("CZK"));
     return "morefilteroption";
   }
-
 
 
 }
