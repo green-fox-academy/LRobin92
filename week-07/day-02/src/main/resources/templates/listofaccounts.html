@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>List of Accounts</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="utf-8" />
+</head>
+<body>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Balance</th>
+        <th>Species</th>
+        <th>Index</th>
+
+    </tr>
+    <tr th:each="account:${accounts}" th:object="${account}">
+        <td th:text="*{name}"></td>
+        <td th:text="${account.getBalance() + '.00 Zebra'}"></td>
+        <td th:text="*{animalType}"></td>
+        <td th:text="${accountStat.index}"></td>
+    </tr>
+</table>
+</body>
+</html>
