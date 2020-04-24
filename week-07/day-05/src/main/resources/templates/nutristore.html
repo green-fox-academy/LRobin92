@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Programmer Fox Club</title>
+</head>
+<body>
+<ul>
+    <li href="http://localhost:8080/information" th:text="Information" ></li>
+    <li href="http://localhost:8080/nutritionStore" th:text="Nutrition Store" ></li>
+</ul>
+<tr>
+    <td>
+        <label for="foods">Food:</label>
+        <select id="foods">
+            <option value="pizza">Pizza</option>
+            <option value="hamburger">Hamburger</option>
+            <option value="salad">Salad</option>
+            <option value="spagetthi">Spagetthi</option>
+        </select>
+    </td>
+</tr>
+</body>
+</html>

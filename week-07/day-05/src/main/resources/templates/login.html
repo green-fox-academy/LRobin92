@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Programmer Fox Club</title>
+</head>
+<body>
+<h1>
+   Welcome to Programmer Fox Club
+</h1>
+<table class="logintable">
+    <tr>
+        <td>Please provide a name, so you can associate it to your pet</td>
+    </tr>
+    <div>
+        <form action="/login" method="POST">
+        <tr>
+            <td>
+                <label class="name" for="name">Name:</label>
+                <input type="text" id="name" name="nameInput">
+                <input type="submit" value="GO">
+            </td>
+        </tr>
+        </form>
+    </div>
+    <tr>
+        <td th:text="${errorinfo}"></td>
+    </tr>
+
+</table>
+</body>
+</html>
