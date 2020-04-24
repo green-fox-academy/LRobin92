@@ -6,18 +6,27 @@
 </head>
 <body>
 <ul>
-    <li href="http://localhost:8080/information" th:text="Information" ></li>
-    <li href="http://localhost:8080/nutritionStore" th:text="Nutrition Store" ></li>
+    <li><a href="http://localhost:8080/information" th:text="'Information'"></a></li>
+    <li><a href="http://localhost:8080/nutritionStore" th:text="'Nutrition Store'"></a></li>
+    <li><a href="http://localhost:8080/trickCenter" th:text="'Tricks Center'"></a></li>
 </ul>
 <tr>
     <td>
         <label for="foods">Food:</label>
         <select id="foods">
-            <option value="pizza">Pizza</option>
-            <option value="hamburger">Hamburger</option>
-            <option value="salad">Salad</option>
-            <option value="spagetthi">Spagetthi</option>
+            <option value="pizza" name="pizza">Pizza</option>
+            <option value="hamburger" name="hamburger">Hamburger</option>
+            <option value="salad" name="salad">Salad</option>
+            <option value="spagetthi" name="spagetthi">Spagetthi</option>
         </select>
+        <label for="drinks">Drink:</label>
+        <select id="drinks">
+            <option value="lemonade" name="lemonade">Lemonade</option>
+            <option value="coke" name="coke">Coke</option>
+            <option value="beer" name="beer">Beer</option>
+            <option value="juice" name="juice">Juice</option>
+        </select>
+        <input type="submit" value="Change">
     </td>
 </tr>
 </body>
