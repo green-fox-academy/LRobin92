@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="/mystyle.css"/>
+<head>
+    <title>Utility Service</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body th:style="'background-color:' + ${backgroundcolor} + ';'">
+<div class="mainheader">
+    <a class="main" href="http://localhost:8080/useful">Home</a>
+    <a href="http://localhost:8080/useful/colored">Colored Background</a>
+    <a href="http://localhost:8080/useful/email">Email validator</a>
+    <a href="http://localhost:8080/useful/encoder">Encoder </a>
+    <a href="http://localhost:8080/useful/decoder">Decoder </a>
+</div>
+<hr>
+<p th:text="${emailadress} + ${validation}" th:style="'color:'+ ${emailcolor}"></p>
+<p th:text="${decoded}"></p>
+<p th:text="${encoded}"></p>
+</body>
+</html>
