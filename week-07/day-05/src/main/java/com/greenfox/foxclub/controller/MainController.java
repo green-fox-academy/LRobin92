@@ -48,7 +48,7 @@ public class MainController {
   }
 
   @RequestMapping(path = "/login", method = RequestMethod.POST)
-  public String postLogin(@RequestParam(value = "nameInput") String nameInput, Model model) {
+  public String postLogin(@RequestParam(value = "nameInput") String nameInput) {
     if (service.getFoxes().stream().noneMatch(fox -> fox.getName().contains(nameInput))) {
       service.addFox(fox);
       this.fox.setName(nameInput);
