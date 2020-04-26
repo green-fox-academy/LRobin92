@@ -11,23 +11,25 @@
     <li><a href="http://localhost:8080/trickCenter" th:text="'Tricks Center'"></a></li>
 </ul>
 <tr>
+    <form action="/nutritionStore" method="POST">
     <td>
         <label for="foods">Food:</label>
-        <select id="foods">
-            <option value="pizza" name="pizza">Pizza</option>
-            <option value="hamburger" name="hamburger">Hamburger</option>
-            <option value="salad" name="salad">Salad</option>
-            <option value="spagetthi" name="spagetthi">Spagetthi</option>
+        <select id="foods" name="numberoffoods">
+            <option value="1" name="pizza">Pizza</option>
+            <option value="2" name="hamburger">Hamburger</option>
+            <option value="3" name="salad">Salad</option>
+            <option value="4" name="spagetthi">Spagetthi</option>
         </select>
         <label for="drinks">Drink:</label>
-        <select id="drinks">
-            <option value="lemonade" name="lemonade">Lemonade</option>
-            <option value="coke" name="coke">Coke</option>
-            <option value="beer" name="beer">Beer</option>
-            <option value="juice" name="juice">Juice</option>
+        <select id="drinks" name="numberofdrinks">
+            <option value="5" name="lemonade">Lemonade</option>
+            <option value="6" name="coke">Coke</option>
+            <option value="7" name="beer">Beer</option>
+            <option value="8" name="juice">Juice</option>
         </select>
         <input type="submit" value="Change">
     </td>
+    </form>
 </tr>
 </body>
 </html>

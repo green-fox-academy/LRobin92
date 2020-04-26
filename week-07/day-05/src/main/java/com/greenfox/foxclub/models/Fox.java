@@ -13,6 +13,12 @@ public class Fox {
   private String food;
   private String drink;
 
+  public Fox(String name){
+    this.name = name;
+    this.food = "pizza";
+    this.drink = "lemonade";
+    this.listOfTrick = new ArrayList<>();
+  }
   public Fox(){
     this.food = "pizza";
     this.drink = "lemonade";
