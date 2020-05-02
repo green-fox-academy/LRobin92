@@ -1,66 +1,135 @@
 package com.greenfoxacademy.connectwithmysql.model;
 
+import java.util.Date;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 
 @Entity
 public class Todo {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private long id;
-  private String title;
-  private boolean urgent;
-  private boolean done;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String title;
+    private String content;
+    private String description;
+    private boolean urgent;
+    private boolean done;
+    @Temporal(value = TemporalType.TIMESTAMP)
+    private Date dateOfCreation = new Date();
+    private String dueDate;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn
+    private Assignee assignee;
 
-  public Todo() {
-    this.urgent = false;
-    this.done = false;
-  }
-  public Todo(String title) {
-    this.title = title;
-    this.urgent = false;
-    this.done = false;
-  }
-  public Todo(String title, boolean urgent, boolean done) {
-    this.title = title;
-    this.urgent = urgent;
-    this.done = done;
-  }
+    public Todo() {
+    }
 
-  public long getId() {
-    return id;
-  }
+    public Todo(String title) {
+      this.title = title;
+    }
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    public Todo(String title, boolean urgent, boolean done) {
+      this.title = title;
+      this.urgent = urgent;
+      this.done = done;
+    }
 
-  public String getTitle() {
-    return title;
-  }
+    public Todo(String title, String content, String description, boolean urgent, boolean done) {
+      this.title = title;
+      this.content = content;
+      this.description = description;
+      this.urgent = urgent;
+      this.done = done;
+    }
 
-  public void setTitle(String title) {
-    this.title = title;
-  }
+    public Todo(String title, String content, String description, boolean urgent, boolean done,
+                String dueDate) {
+      this.title = title;
+      this.content = content;
+      this.description = description;
+      this.urgent = urgent;
+      this.done = done;
+      this.dueDate = dueDate;
+    }
 
-  public boolean isUrgent() {
-    return urgent;
-  }
+    public Long getId() {
+      return id;
+    }
 
-  public void setUrgent(boolean urgent) {
-    this.urgent = urgent;
-  }
+    public void setId(Long id) {
+      this.id = id;
+    }
 
-  public boolean isDone() {
-    return done;
-  }
+    public String getTitle() {
+      return title;
+    }
 
-  public void setDone(boolean done) {
-    this.done = done;
-  }
+    public boolean isUrgent() {
+      return urgent;
+    }
 
+    public boolean isDone() {
+      return done;
+    }
+
+    public String getContent() {
+      return content;
+    }
+
+    public String getDescription() {
+      return description;
+    }
+
+    public Assignee getAssignee() {
+      return assignee;
+    }
+
+    public void setAssignee(Assignee assignee) {
+      this.assignee = assignee;
+    }
+
+    public Date getDateOfCreation() {
+      return dateOfCreation;
+    }
+
+    public String getDueDate() {
+      return dueDate;
+    }
+
+    public void setTitle(String title) {
+      this.title = title;
+    }
+
+    public void setContent(String content) {
+      this.content = content;
+    }
+
+    public void setDescription(String description) {
+      this.description = description;
+    }
+
+    public void setUrgent(boolean urgent) {
+      this.urgent = urgent;
+    }
+
+    public void setDone(boolean done) {
+      this.done = done;
+    }
+
+    public void setDateOfCreation(Date dateOfCreation) {
+      this.dateOfCreation = dateOfCreation;
+    }
+
+    public void setDueDate(String dueDate) {
+      this.dueDate = dueDate;
+    }
 }

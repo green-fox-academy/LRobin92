@@ -2,8 +2,6 @@ package com.greenfox.foxclub.controller;
 
 import com.greenfox.foxclub.models.Fox;
 import com.greenfox.foxclub.services.FoxService;
-import java.util.ArrayList;
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -45,7 +43,7 @@ public class MainController {
   public String postLogin(@RequestParam(value = "nameInput") String nameInput) {
     if (service.getFoxes().stream().noneMatch(fox -> fox.getName().contains(nameInput))) {
       service.addFox(new Fox(nameInput));
-    } else{
+    } else {
       service.setCurrentFox(nameInput);
     }
     return "redirect:/?name=" + service.getCurrentFox().getName();
@@ -74,11 +72,12 @@ public class MainController {
       service.getCurrentFox().getListOfTrick().add("Write in HTML");
     } else if (numberoftricks == 3 && !service.getCurrentFox().getListOfTrick().contains("Giving great presentation")) {
       service.getCurrentFox().getListOfTrick().add("Giving great presentation");
-    } else if (numberoftricks == 4 && !service.getCurrentFox().getListOfTrick().contains("Can speak english fluently")){
+    } else if (numberoftricks == 4 && !service.getCurrentFox().getListOfTrick().contains("Can speak english fluently")) {
       service.getCurrentFox().getListOfTrick().add("Can speak english fluently");
     }
     return "redirect:/?name=" + service.getCurrentFox().getName();
   }
+
   @RequestMapping(value = "/nutritionStore", method = RequestMethod.POST)
   public String ChangeNutriStore(int numberoffoods, int numberofdrinks) {
     if (numberoffoods == 1 && !service.getCurrentFox().getFood().equals("Pizza")) {
@@ -87,7 +86,7 @@ public class MainController {
       service.getCurrentFox().setFood("Hamburger");
     } else if (numberoffoods == 3 && !service.getCurrentFox().getFood().equals("Salad")) {
       service.getCurrentFox().setFood("Salad");
-    } else if (numberoffoods == 4 && !service.getCurrentFox().getFood().equals("Spagetthi")){
+    } else if (numberoffoods == 4 && !service.getCurrentFox().getFood().equals("Spagetthi")) {
       service.getCurrentFox().setFood("Spagetthi");
     }
     if (numberofdrinks == 5 && !service.getCurrentFox().getFood().equals("Lemonade")) {
@@ -96,7 +95,7 @@ public class MainController {
       service.getCurrentFox().setDrink("Coke");
     } else if (numberofdrinks == 7 && !service.getCurrentFox().getFood().equals("Beer")) {
       service.getCurrentFox().setDrink("Beer");
-    } else if (numberofdrinks == 8 && !service.getCurrentFox().getFood().equals("Juice")){
+    } else if (numberofdrinks == 8 && !service.getCurrentFox().getFood().equals("Juice")) {
       service.getCurrentFox().setDrink("Juice");
     }
     return "redirect:/?name=" + service.getCurrentFox().getName();

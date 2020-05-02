@@ -7,6 +7,21 @@
 <body>
 <h1>Todos for today:</h1>
 <a href="http://localhost:8080/todo/add" th:text="'Add new todo'"></a>
+<div class="search">
+    <form action="/search" method="post">
+        <label for="searchBar"> Search todos</label>
+        <input id="searchBar" type="text" name="searchInPut">
+        <label for="searchSelect"></label>
+        <select id="searchSelect" name="searchType">
+            <option value="title">Title</option>
+            <option value="content">Content</option>
+            <option value="description">Description</option>
+            <option value="dueDate">Due Date</option>
+            <option value="assignee">Assignee</option>
+        </select>
+        <input type="submit" value="Search">
+    </form>
+</div>
 <table>
     <thead>
     <tr>

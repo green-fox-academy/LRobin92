@@ -2,10 +2,7 @@ package com.greenfox.foxclub.models;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-@Service
 public class Fox {
   // name, list of tricks, food and drink
   private String name;
