@@ -81,14 +81,6 @@ public class Todo {
       return done;
     }
 
-    public String getContent() {
-      return content;
-    }
-
-    public String getDescription() {
-      return description;
-    }
-
     public Assignee getAssignee() {
       return assignee;
     }
@@ -97,25 +89,11 @@ public class Todo {
       this.assignee = assignee;
     }
 
-    public Date getDateOfCreation() {
-      return dateOfCreation;
-    }
-
-    public String getDueDate() {
-      return dueDate;
-    }
 
     public void setTitle(String title) {
       this.title = title;
     }
 
-    public void setContent(String content) {
-      this.content = content;
-    }
-
-    public void setDescription(String description) {
-      this.description = description;
-    }
 
     public void setUrgent(boolean urgent) {
       this.urgent = urgent;
