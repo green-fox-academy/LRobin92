@@ -1,27 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<<head>
-    <title>List Assignees</title>
+<head>
+    <title>Assignee Info</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="UTF-8">
 </head>
 <body>
-<h1> List of Assignees: </h1>
-<button> <a href="/addassignee"> Add Assignee</a></button>
-<button> <a href="/list"> Todo List</a></button>
-<table>
-    <tr>
-        <th> Id </th>
-        <th> Name </th>
-        <th> Email </th>
-    </tr>
-    <tr th:each="assignee:${assignees}">
-        <td th:text="${assignee.id}"></td>
-        <td>
-            <a th:text="${assignee.name}" th:href="'assigneeinfo/' + ${assignee.id}"></a>
-        </td>
-        <td th:text="${assignee.email}"></td>
-        <td><button><a th:href="${assignee.id} + '/deleteassignee'">Delete</a></button></td>
-        <td><button><a th:href="${assignee.id} + '/editassignee'">Edit</a></button></td>
-    </tr>
-</table>
+<h2 th:text="${assignee.name} +' has the following todos: '"> </h2>
+<ul th:each="todo:${assigneetodolist}">
+    <li th:text="${todo.title}"></li>
+</ul>
+<button><a href="/list">Todos</a></button>
+<button><a href="/listassignees">Assignees</a></button>
 </body>
 </html>
