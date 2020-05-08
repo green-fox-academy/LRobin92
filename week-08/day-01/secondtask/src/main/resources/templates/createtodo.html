@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Edit the todo</title>
+    <meta charset="UTF-8">
+    <title>Todo with MySQL</title>
 </head>
 <body>
-<h1> Edit the Todo </h1>
-<form th:object="${todo}" th:action="@{'/' + ${todo.getId()} + '/edit'}" method="post">
+<h1> Create a new Todo </h1>
+<form action="/add" th:object="${todo}" method="post">
 
     <label for="title">Title</label>
     <input id="title" type="text" th:field="*{title}">
@@ -22,14 +23,8 @@
     <label for="done">Done</label>
     <input id="done" type="checkbox" th:field="*{done}">
 
-    <label for="dueDateSet">due date</label>
-    <input id="dueDateSet" type="date" th:field="*{dueDate}">
-
-    <label for="assigneeSelect">Select an Assignee</label>
-    <select id="assigneeSelect" name="assigneeSelect">
-        <option th:each="assignee:${assignees}" th:text="${assignee.name}" th:field="*{assignee}" th:value="${assignee.id}">
-        </option>
-    </select>
+    <label for="dueDate">Due Date</label>
+    <input id="dueDate" type="date" th:field="*{dueDate}">
 
     <input type="submit">
 </form>

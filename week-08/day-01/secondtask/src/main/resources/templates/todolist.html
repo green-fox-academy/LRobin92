@@ -7,6 +7,8 @@
 <body>
 <h1>Todos for today:</h1>
 <a href="http://localhost:8080/todo/add" th:text="'Add new todo'"></a>
+<button> <a href="/?isActive=true"> Active Todos</a></button>
+<button> <a href="/listassignees"> List Assignees </a></button>
 <div class="search">
     <form action="/search" method="post">
         <label for="searchBar"> Search todos</label>
@@ -29,6 +31,9 @@
         <th>Title</th>
         <th>Urgent</th>
         <th>Done</th>
+        <th>Assignee</th>
+        <th>Created on</th>
+        <th>Due Date</th>
     </tr>
     </thead>
     <tbody>
@@ -37,6 +42,11 @@
         <td th:text="${todo.title}"></td>
         <td th:text="${todo.isUrgent()}"></td>
         <td th:text="${todo.isDone()}"></td>
+        <td th:if="${todo.assignee != null}" ><a th:text="${todo.assignee.name}"
+                                                 th:href="'assigneeinfo/' + ${todo.assignee.id}"></a></td>
+        <td th:if="${todo.assignee == null}" th:text="|Not Assigned|"></td>
+        <td th:text="${todo.dateOfCreation}"></td>
+        <td th:text="${todo.dueDate}"></td>
         <td><a th:href="'/' + ${todo.getId()} + '/delete'">delete</a></td>
         <td><a th:href="'/' + ${todo.getId()} + '/edit'">Edit</a></td>
     </tr>

@@ -27,5 +27,7 @@ public class ConnectwithmysqlApplication  implements CommandLineRunner {
     todoRepository.save(new Todo("Do the washing up", false, true));
     todoRepository.save(new Todo("Vacuum the carpet", false, false));
     todoRepository.save(new Todo("Walk the dog", true, true));
+    todoRepository.save(new Todo("Programming more", true, false));
+    todoRepository.save(new Todo("Buy some food", false, false));
   }
 }

@@ -9,37 +9,52 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-  public class ToDoServiceImpl implements ToDoService {
-  private TodoRepository repo;
+public class TodoService {
+  private TodoRepository todoRepository;
   private AssigneeRepository assigneeRepository;
 
   @Autowired
-  public ToDoServiceImpl(TodoRepository repo, AssigneeRepository assigneeRepository) {
+  public TodoService(TodoRepository todoRepository, AssigneeRepository assigneeRepository) {
+    this.todoRepository = todoRepository;
     this.assigneeRepository = assigneeRepository;
-    this.repo = repo;
   }
 
-  public Iterable<Todo> getAllTodo(){
-    return repo.findAll();
+  public Iterable<Todo> getTodosByDoneIsFalse() {
+    return todoRepository.getTodosByDoneIsFalse();
   }
-  public void saveToDo(Todo todo){
-    repo.save(todo);
+
+  public Iterable<Todo> getAllTodos() {
+    return todoRepository.findAll();
   }
+
+  public void saveTodo(Todo todo) {
+    todoRepository.save(todo);
+  }
+
+  public void deleteTodoById(Long id) {
+    todoRepository.deleteById(id);
+  }
+
+  public Todo getTodoById(Long id) {
+    return todoRepository.getTodoById(id);
+  }
+
   public Iterable<Todo> searchTodosByWord(String searchType, String searchWord) {
     switch (searchType) {
       case "title":
-        return repo.getTodosByTitle(searchWord);
+        return todoRepository.getTodosByTitleContains(searchWord);
       case "content":
-        return repo.getTodosByContent(searchWord);
+        return todoRepository.getTodosByContentContains(searchWord);
       case "description":
-        return repo.getTodosByDescription(searchWord);
+        return todoRepository.getTodosByDescriptionContains(searchWord);
       case "dueDate":
-        return repo.getTodosByDueDate(searchWord);
+        return todoRepository.getTodosByDueDateContains(searchWord);
       case "assignee":
-        return repo.findAllByAssigneeName(searchWord);
+        return todoRepository.findAllByAssigneeNameContains(searchWord);
     }
-    return repo.findAll();
+    return todoRepository.findAll();
   }
+
   public Iterable<Assignee> getAllAssignees() {
     return assigneeRepository.findAll();
   }
@@ -62,7 +77,6 @@ import org.springframework.stereotype.Service;
     todoList.add(todo);
     assignee.setTodoList(todoList);
     assigneeRepository.save(assignee);
-    repo.save(todo);
+    todoRepository.save(todo);
   }
-
 }

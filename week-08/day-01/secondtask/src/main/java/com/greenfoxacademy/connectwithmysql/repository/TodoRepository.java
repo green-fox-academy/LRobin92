@@ -7,10 +7,11 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TodoRepository extends CrudRepository<Todo, Long> {
-  List<Todo> findAllByDoneEquals(boolean isDone);
-  Iterable<Todo> getTodosByTitle(String title);
-  Iterable<Todo> getTodosByContent(String content);
-  Iterable<Todo> getTodosByDescription(String desription);
-  Iterable<Todo> getTodosByDueDate(String dueDate);
-  Iterable<Todo> findAllByAssigneeName(String assigneeName);
+  Iterable<Todo> getTodosByDoneIsFalse();
+  Todo getTodoById(Long id);
+  Iterable<Todo> getTodosByTitleContains(String title);
+  Iterable<Todo> getTodosByContentContains(String content);
+  Iterable<Todo> getTodosByDescriptionContains(String desription);
+  Iterable<Todo> getTodosByDueDateContains(String dueDate);
+  Iterable<Todo> findAllByAssigneeNameContains(String assigneeName);
 }

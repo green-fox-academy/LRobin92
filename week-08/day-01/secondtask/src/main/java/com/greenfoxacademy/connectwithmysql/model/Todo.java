@@ -15,99 +15,121 @@ import javax.persistence.TemporalType;
 @Entity
 public class Todo {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String title;
-    private String content;
-    private String description;
-    private boolean urgent;
-    private boolean done;
-    @Temporal(value = TemporalType.TIMESTAMP)
-    private Date dateOfCreation = new Date();
-    private String dueDate;
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn
-    private Assignee assignee;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+  private String title;
+  private String content;
+  private String description;
+  private boolean urgent;
+  private boolean done;
+  @Temporal(value = TemporalType.TIMESTAMP)
+  private Date dateOfCreation = new Date();
+  private String dueDate;
+  @ManyToOne(fetch = FetchType.EAGER)
+  @JoinColumn
+  private Assignee assignee;
 
-    public Todo() {
-    }
+  public Todo() {
+  }
 
-    public Todo(String title) {
-      this.title = title;
-    }
+  public Todo(String title) {
+    this.title = title;
+  }
 
-    public Todo(String title, boolean urgent, boolean done) {
-      this.title = title;
-      this.urgent = urgent;
-      this.done = done;
-    }
+  public Todo(String title, boolean urgent, boolean done) {
+    this.title = title;
+    this.urgent = urgent;
+    this.done = done;
+  }
 
-    public Todo(String title, String content, String description, boolean urgent, boolean done) {
-      this.title = title;
-      this.content = content;
-      this.description = description;
-      this.urgent = urgent;
-      this.done = done;
-    }
+  public Todo(String title, String content, String description, boolean urgent, boolean done) {
+    this.title = title;
+    this.content = content;
+    this.description = description;
+    this.urgent = urgent;
+    this.done = done;
+  }
 
-    public Todo(String title, String content, String description, boolean urgent, boolean done,
-                String dueDate) {
-      this.title = title;
-      this.content = content;
-      this.description = description;
-      this.urgent = urgent;
-      this.done = done;
-      this.dueDate = dueDate;
-    }
+  public Todo(String title, String content, String description, boolean urgent, boolean done,
+              String dueDate) {
+    this.title = title;
+    this.content = content;
+    this.description = description;
+    this.urgent = urgent;
+    this.done = done;
+    this.dueDate = dueDate;
+  }
 
-    public Long getId() {
-      return id;
-    }
+  public Long getId() {
+    return id;
+  }
 
-    public void setId(Long id) {
-      this.id = id;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public String getTitle() {
-      return title;
-    }
+  public String getTitle() {
+    return title;
+  }
 
-    public boolean isUrgent() {
-      return urgent;
-    }
+  public boolean isUrgent() {
+    return urgent;
+  }
 
-    public boolean isDone() {
-      return done;
-    }
+  public boolean isDone() {
+    return done;
+  }
 
-    public Assignee getAssignee() {
-      return assignee;
-    }
+  public String getContent() {
+    return content;
+  }
 
-    public void setAssignee(Assignee assignee) {
-      this.assignee = assignee;
-    }
+  public String getDescription() {
+    return description;
+  }
 
+  public Assignee getAssignee() {
+    return assignee;
+  }
 
-    public void setTitle(String title) {
-      this.title = title;
-    }
+  public void setAssignee(Assignee assignee) {
+    this.assignee = assignee;
+  }
 
+  public Date getDateOfCreation() {
+    return dateOfCreation;
+  }
 
-    public void setUrgent(boolean urgent) {
-      this.urgent = urgent;
-    }
+  public String getDueDate() {
+    return dueDate;
+  }
 
-    public void setDone(boolean done) {
-      this.done = done;
-    }
+  public void setTitle(String title) {
+    this.title = title;
+  }
 
-    public void setDateOfCreation(Date dateOfCreation) {
-      this.dateOfCreation = dateOfCreation;
-    }
+  public void setContent(String content) {
+    this.content = content;
+  }
 
-    public void setDueDate(String dueDate) {
-      this.dueDate = dueDate;
-    }
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public void setUrgent(boolean urgent) {
+    this.urgent = urgent;
+  }
+
+  public void setDone(boolean done) {
+    this.done = done;
+  }
+
+  public void setDateOfCreation(Date dateOfCreation) {
+    this.dateOfCreation = dateOfCreation;
+  }
+
+  public void setDueDate(String dueDate) {
+    this.dueDate = dueDate;
+  }
 }
