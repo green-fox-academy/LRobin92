@@ -34,8 +34,7 @@ public class TodoController {
   }
 
   @GetMapping("/add")
-  public String getCreate(Model model) {
-    model.addAttribute("todo", new Todo());
+  public String getCreate() {
     return "createtodo";
   }
 
