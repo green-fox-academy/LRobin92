@@ -1,11 +1,13 @@
 package com.greenfoxacademy.exampleexam.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+@JsonIgnoreProperties(value = {"secretCode"})
 public class Link {
 
   @Id
@@ -15,6 +17,7 @@ public class Link {
   private String alias;
   private int hitCount;
   private String secretCode;
+  private boolean isDone;
 
   public Link(String url, String alias, String secretCode) {
     this.url = url;
@@ -64,5 +67,13 @@ public class Link {
 
   public void setHitCount(int hitCount) {
     this.hitCount = hitCount;
+  }
+
+  public boolean isDone() {
+    return isDone;
+  }
+
+  public void setDone(boolean done) {
+    isDone = done;
   }
 }
