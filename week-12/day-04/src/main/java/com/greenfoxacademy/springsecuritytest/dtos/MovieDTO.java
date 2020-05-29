@@ -1,11 +1,10 @@
-package com.greenfoxacademy.springsecuritytest.models;
+package com.greenfoxacademy.springsecuritytest.dtos;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
-public class Result {
-
+public class MovieDTO {
   @SerializedName("popularity")
   @Expose
   private Double popularity;

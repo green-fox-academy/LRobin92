@@ -1,10 +1,11 @@
-package com.greenfoxacademy.springsecuritytest.models;
+package com.greenfoxacademy.springsecuritytest.dtos;
 
-import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.greenfoxacademy.springsecuritytest.models.Result;
+import java.util.List;
 
-public class MovieResults {
+public class MovieListDTO {
 
   @SerializedName("page")
   @Expose
@@ -17,7 +18,7 @@ public class MovieResults {
   private Integer totalPages;
   @SerializedName("results")
   @Expose
-  private List<Result> results = null;
+  private List<MovieDTO> results = null;
 
   public Integer getPage() {
     return page;
@@ -43,12 +44,11 @@ public class MovieResults {
     this.totalPages = totalPages;
   }
 
-  public List<Result> getResults() {
+  public List<MovieDTO> getResults() {
     return results;
   }
 
-  public void setResults(List<Result> results) {
+  public void setResults(List<MovieDTO> results) {
     this.results = results;
   }
-
 }
