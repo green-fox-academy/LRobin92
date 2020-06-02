@@ -2,7 +2,6 @@ package com.greenfoxacademy.springsecuritytest.dtos;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.greenfoxacademy.springsecuritytest.models.Result;
 import java.util.List;
 
 public class MovieListDTO {
